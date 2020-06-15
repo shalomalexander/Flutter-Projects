@@ -98,9 +98,9 @@ class MealsDetailScreen extends StatelessWidget {
               child: buildTitle(context, Icon(Icons.bubble_chart), 'Steps'),
             ),
             Container(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               height: 200,
-              width: screenSize.width - 70,
+              width: screenSize.width - 100,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 border: Border.all(),
@@ -112,6 +112,12 @@ class MealsDetailScreen extends StatelessWidget {
             SizedBox(height: 10),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.delete),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
       ),
     );
   }
