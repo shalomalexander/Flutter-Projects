@@ -20,7 +20,11 @@ class MealItem extends StatelessWidget {
   });
 
   void selectMeal(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(MealsDetailScreen.routeName, arguments: id,);
+    Navigator.of(ctx)
+        .pushNamed(
+      MealsDetailScreen.routeName,
+      arguments: id,
+    );
   }
 
   String get complexityText {
@@ -36,11 +40,11 @@ class MealItem extends StatelessWidget {
         break;
       default:
         return 'Unknown';
-        break;     
+        break;
     }
   }
 
-   String get affordabilityText {
+  String get affordabilityText {
     switch (affordability) {
       case Affordability.Affordable:
         return 'Affordable';
@@ -53,7 +57,7 @@ class MealItem extends StatelessWidget {
         break;
       default:
         return 'Unknown';
-        break;     
+        break;
     }
   }
 
